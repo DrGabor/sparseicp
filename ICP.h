@@ -269,7 +269,8 @@ namespace SICP {
         for(int icp=0; icp<par.max_icp; ++icp) {
             if(par.print_icpn) std::cout << "Iteration #" << icp << "/" << par.max_icp << std::endl;
             /// Find closest point
-            #pragma omp parallel for
+            // using omp here will introduce coredump....
+            // #pragma omp parallel for
             for(int i=0; i<X.cols(); ++i) {
                 Q.col(i) = Y.col(kdtree.closest(X.col(i).data()));
             }
