@@ -12,7 +12,13 @@ Project webpage: http://lgg.epfl.ch/sparseicp
 You can download the single-file header only library here:
 https://raw.githubusercontent.com/OpenGP/sparseicp/master/ICP.h
 
-# Source Code Licence
+# Source Code License
 This Source Code is subject to the terms of the Mozilla Public License v. 2.0.
 If a copy of the MPL was not distributed with this file, you can obtain one at http://mozilla.org/MPL/2.0/.
 
+# HOW TO RUN
+```
+mkdir build && cd build
+cmake ..
+make
+```
