@@ -6,8 +6,10 @@ set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
 
 #--- Compiler configuration
 # can be relwithdebinfo or debug
-set(CMAKE_BUILD_TYPE "Debug")
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3")
+# set(CMAKE_BUILD_TYPE Debug)
+# 设置 Debug 模式下的编译器标志
+set(CMAKE_CXX_FLAGS_DEBUG "-g -O0")  # 禁用优化并启用调试信息
+# set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17")
 
 #--- OpenMP (cannot work in clang)
